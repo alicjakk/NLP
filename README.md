@@ -10,6 +10,7 @@ Keep these files in the same project folder:
   execution.
 - qwen.py -- sends the question and database schema to Ollama and
   receives SQL.
+  
 Setup
 1. Make sure PostgreSQL is running and the Northwind tables are
    imported.
