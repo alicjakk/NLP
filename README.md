@@ -5,10 +5,10 @@ Local LLM to SQL -- Northwind
 - Ollama with a local model installed (for example, qwen2.5:7b).
 Project files
 Keep these files in the same project folder:
-- app.py -- Streamlit user interface.
+- generator.py -- Streamlit user interface.
 - database.py -- PostgreSQL connection, schema reading, and query
   execution.
-- llm.py -- sends the question and database schema to Ollama and
+- qwen.py -- sends the question and database schema to Ollama and
   receives SQL.
 Setup
 1. Make sure PostgreSQL is running and the Northwind tables are
@@ -21,14 +21,14 @@ Setup
    connection URL unless you rename the database.
    Example:
    DATABASE_URL = "postgresql+psycopg2://postgres:YOUR_PASSWORD@localhost:5432/nortwind"
-4. Make sure Ollama is running and the model named in llm.py is
+4. Make sure Ollama is running and the model named in qwen.py is
    installed. Check installed models with:
    ollama list
-5. Set MODEL in llm.py to the exact model name shown by
+5. Set MODEL in qwen.py to the exact model name shown by
    ollama list.
 Run the app
 From the project folder, run:
-streamlit run app.py
+streamlit run generator.py
 Streamlit will show a local web address in the terminal. Open that
 address in your browser.
 Expected workflow
